@@ -39,6 +39,9 @@ public class HibernateConfig {
           "hibernate.hbm2ddl.auto", "create");
         hibernateProperties.setProperty(
           "hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        
+        hibernateProperties.setProperty(
+                "spring.jpa.show-sql", "true");
 
         return hibernateProperties;
     }
@@ -47,7 +50,7 @@ public class HibernateConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(getDataSource());
-       sessionFactory.setPackagesToScan("com.show.service.entity");
+       sessionFactory.setPackagesToScan("com.movie.service.entity");
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;

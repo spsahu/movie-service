@@ -1,30 +1,36 @@
 package com.movie.service.entity;
 
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 
-@Entity
 @Table(name = "tbl_movie", schema = "movie_details")
+@Entity
 public class MovieEntity {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer movieId;
-	
+
 	@Column
-	private String movieName;
-	
+	private String moviename;
+
 	@Column
 	private Double runtime;
-	
+
 	@Column
 	private String language;
-	
+
 	@Column
 	private Integer runTimeDuration;
-	
-	@ManyToOne
-	@JoinColumn(name="showId")
-	private ShowEntity showEntity;
 
 	/**
 	 * @return the movieId
@@ -40,19 +46,16 @@ public class MovieEntity {
 		this.movieId = movieId;
 	}
 
-	/**
-	 * @return the movieName
-	 */
-	public String getMovieName() {
-		return movieName;
+	
+
+	public String getMoviename() {
+		return moviename;
 	}
 
-	/**
-	 * @param movieName the movieName to set
-	 */
-	public void setMovieName(String movieName) {
-		this.movieName = movieName;
+	public void setMoviename(String moviename) {
+		this.moviename = moviename;
 	}
+
 
 	/**
 	 * @return the runtime
@@ -95,9 +98,5 @@ public class MovieEntity {
 	public void setRunTimeDuration(Integer runTimeDuration) {
 		this.runTimeDuration = runTimeDuration;
 	}
-	
-	
-	
-	
 
 }

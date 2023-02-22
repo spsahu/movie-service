@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.movieService</groupId>
-	<artifactId>com.movieService</artifactId>
+	<artifactId>movie-Service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>movie-service</name>
 	<description>Movie Service</description>
@@ -50,11 +50,11 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<dependency>
+		<!-- <dependency>
 	<groupId>com.showService</groupId>
-	<artifactId>com.showService</artifactId>
+	<artifactId>show-Service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-</dependency>
+</dependency> -->
 	</dependencies>
 
 	<build>
